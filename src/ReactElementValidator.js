@@ -12,25 +12,25 @@
  * that support it.
  */
 
-import lowPriorityWarning from 'shared/lowPriorityWarning';
-import isValidElementType from 'shared/isValidElementType';
-import getComponentName from 'shared/getComponentName';
+import lowPriorityWarning from 'shared/lowPriorityWarning.js';
+import isValidElementType from 'shared/isValidElementType.js';
+import getComponentName from 'shared/getComponentName.js';
 import {
   getIteratorFn,
   REACT_FORWARD_REF_TYPE,
   REACT_MEMO_TYPE,
   REACT_FRAGMENT_TYPE,
   REACT_ELEMENT_TYPE,
-} from 'shared/ReactSymbols';
-import checkPropTypes from 'prop-types/checkPropTypes';
-import warning from 'shared/warning';
-import warningWithoutStack from 'shared/warningWithoutStack';
+} from 'shared/ReactSymbols.js';
+import checkPropTypes from 'prop-types/checkPropTypes.js';
+import warning from 'shared/warning.js';
+import warningWithoutStack from 'shared/warningWithoutStack.js';
 
-import ReactCurrentOwner from './ReactCurrentOwner';
-import {isValidElement, createElement, cloneElement} from './ReactElement';
+import ReactCurrentOwner from './ReactCurrentOwner.js';
+import {isValidElement, createElement, cloneElement} from './ReactElement.js';
 import ReactDebugCurrentFrame, {
   setCurrentlyValidatingElement,
-} from './ReactDebugCurrentFrame';
+} from './ReactDebugCurrentFrame.js';
 
 let propTypesMisspellWarningShown;
 

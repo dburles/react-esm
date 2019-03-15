@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import type {LazyComponent, Thenable} from 'shared/ReactLazyComponent';
+import type {LazyComponent, Thenable} from 'shared/ReactLazyComponent.js';
 
-import {REACT_LAZY_TYPE} from 'shared/ReactSymbols';
-import warning from 'shared/warning';
+import {REACT_LAZY_TYPE} from 'shared/ReactSymbols.js';
+import warning from 'shared/warning.js';
 
 export function lazy<T, R>(ctor: () => Thenable<T, R>): LazyComponent<T> {
   let lazyType = {

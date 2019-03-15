@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import assign from 'object-assign';
+import assign from 'object-assign.js';
 import {
   unstable_cancelCallback,
   unstable_shouldYield,
@@ -23,7 +23,7 @@ import {
   unstable_LowPriority,
   unstable_NormalPriority,
   unstable_UserBlockingPriority,
-} from 'scheduler';
+} from 'scheduler.js';
 import {
   __interactionsRef,
   __subscriberRef,
@@ -34,10 +34,10 @@ import {
   unstable_trace,
   unstable_unsubscribe,
   unstable_wrap,
-} from 'scheduler/tracing';
-import ReactCurrentDispatcher from './ReactCurrentDispatcher';
-import ReactCurrentOwner from './ReactCurrentOwner';
-import ReactDebugCurrentFrame from './ReactDebugCurrentFrame';
+} from 'scheduler/tracing.js';
+import ReactCurrentDispatcher from './ReactCurrentDispatcher.js';
+import ReactCurrentOwner from './ReactCurrentOwner.js';
+import ReactDebugCurrentFrame from './ReactDebugCurrentFrame.js';
 
 const ReactSharedInternals = {
   ReactCurrentDispatcher,

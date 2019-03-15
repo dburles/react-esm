@@ -7,11 +7,11 @@
  * @flow
  */
 
-import type {ReactContext} from 'shared/ReactTypes';
-import invariant from 'shared/invariant';
-import warning from 'shared/warning';
+import type {ReactContext} from 'shared/ReactTypes.js';
+import invariant from 'shared/invariant.js';
+import warning from 'shared/warning.js';
 
-import ReactCurrentDispatcher from './ReactCurrentDispatcher';
+import ReactCurrentDispatcher from './ReactCurrentDispatcher.js';
 
 function resolveDispatcher() {
   const dispatcher = ReactCurrentDispatcher.current;

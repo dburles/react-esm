@@ -7,12 +7,12 @@
  * @flow
  */
 
-import {REACT_PROVIDER_TYPE, REACT_CONTEXT_TYPE} from 'shared/ReactSymbols';
+import {REACT_PROVIDER_TYPE, REACT_CONTEXT_TYPE} from 'shared/ReactSymbols.js';
 
-import type {ReactContext} from 'shared/ReactTypes';
+import type {ReactContext} from 'shared/ReactTypes.js';
 
-import warningWithoutStack from 'shared/warningWithoutStack';
-import warning from 'shared/warning';
+import warningWithoutStack from 'shared/warningWithoutStack.js';
+import warning from 'shared/warning.js';
 
 export function createContext<T>(
   defaultValue: T,

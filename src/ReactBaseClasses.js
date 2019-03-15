@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import invariant from 'shared/invariant';
-import lowPriorityWarning from 'shared/lowPriorityWarning';
+import invariant from 'shared/invariant.js';
+import lowPriorityWarning from 'shared/lowPriorityWarning.js';
 
-import ReactNoopUpdateQueue from './ReactNoopUpdateQueue';
+import ReactNoopUpdateQueue from './ReactNoopUpdateQueue.js';
 
 const emptyObject = {};
 if (__DEV__) {

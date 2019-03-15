@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import warningWithoutStack from 'shared/warningWithoutStack';
+import warningWithoutStack from 'shared/warningWithoutStack.js';
 
 const didWarnStateUpdateForUnmountedComponent = {};
 

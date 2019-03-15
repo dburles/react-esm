@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import invariant from 'shared/invariant';
-import warningWithoutStack from 'shared/warningWithoutStack';
-import {REACT_ELEMENT_TYPE} from 'shared/ReactSymbols';
+import invariant from 'shared/invariant.js';
+import warningWithoutStack from 'shared/warningWithoutStack.js';
+import {REACT_ELEMENT_TYPE} from 'shared/ReactSymbols.js';
 
-import ReactCurrentOwner from './ReactCurrentOwner';
+import ReactCurrentOwner from './ReactCurrentOwner.js';
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 

@@ -7,10 +7,10 @@
  * @flow
  */
 
-import type {ReactElement} from 'shared/ReactElementType';
+import type {ReactElement} from 'shared/ReactElementType.js';
 
-import describeComponentFrame from 'shared/describeComponentFrame';
-import getComponentName from 'shared/getComponentName';
+import describeComponentFrame from 'shared/describeComponentFrame.js';
+import getComponentName from 'shared/getComponentName.js';
 
 const ReactDebugCurrentFrame = {};
 

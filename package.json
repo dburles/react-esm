@@ -37,6 +37,7 @@
     "scheduler": "^0.13.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/preset-flow": "^7.0.0",
     "@pika/pack": "^0.3.4",
     "@pika/plugin-build-web": "^0.3.14",

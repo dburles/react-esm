@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import invariant from 'shared/invariant';
-import warning from 'shared/warning';
+import invariant from 'shared/invariant.js';
+import warning from 'shared/warning.js';
 import {
   getIteratorFn,
   REACT_ELEMENT_TYPE,
   REACT_PORTAL_TYPE,
-} from 'shared/ReactSymbols';
+} from 'shared/ReactSymbols.js';
 
-import {isValidElement, cloneAndReplaceKey} from './ReactElement';
-import ReactDebugCurrentFrame from './ReactDebugCurrentFrame';
+import {isValidElement, cloneAndReplaceKey} from './ReactElement.js';
+import ReactDebugCurrentFrame from './ReactDebugCurrentFrame.js';
 
 const SEPARATOR = '.';
 const SUBSEPARATOR = ':';

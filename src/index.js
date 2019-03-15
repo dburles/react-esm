@@ -5,28 +5,28 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import ReactVersion from 'shared/ReactVersion';
+import ReactVersion from 'shared/ReactVersion.js';
 import {
   REACT_CONCURRENT_MODE_TYPE,
   REACT_FRAGMENT_TYPE,
   REACT_PROFILER_TYPE,
   REACT_STRICT_MODE_TYPE,
   REACT_SUSPENSE_TYPE,
-} from 'shared/ReactSymbols';
+} from 'shared/ReactSymbols.js';
 
-import {Component, PureComponent} from './ReactBaseClasses';
-import {createRef} from './ReactCreateRef';
-import {forEach, map, count, toArray, only} from './ReactChildren';
+import {Component, PureComponent} from './ReactBaseClasses.js';
+import {createRef} from './ReactCreateRef.js';
+import {forEach, map, count, toArray, only} from './ReactChildren.js';
 import {
   createElement,
   createFactory,
   cloneElement,
   isValidElement,
-} from './ReactElement';
-import {createContext} from './ReactContext';
-import {lazy} from './ReactLazy';
-import forwardRef from './forwardRef';
-import memo from './memo';
+} from './ReactElement.js';
+import {createContext} from './ReactContext.js';
+import {lazy} from './ReactLazy.js';
+import forwardRef from './forwardRef.js';
+import memo from './memo.js';
 import {
   useCallback,
   useContext,
@@ -38,14 +38,14 @@ import {
   useReducer,
   useRef,
   useState,
-} from './ReactHooks';
+} from './ReactHooks.js';
 import {
   createElementWithValidation,
   createFactoryWithValidation,
   cloneElementWithValidation,
-} from './ReactElementValidator';
-import ReactSharedInternals from './ReactSharedInternals';
-import {enableStableConcurrentModeAPIs} from 'shared/ReactFeatureFlags';
+} from './ReactElementValidator.js';
+import ReactSharedInternals from './ReactSharedInternals.js';
+import {enableStableConcurrentModeAPIs} from 'shared/ReactFeatureFlags.js';
 
 const React = {
   Children: {

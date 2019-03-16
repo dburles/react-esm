@@ -22,11 +22,11 @@ export const {
 
 // In www, we have experimental support for gathering data
 // from User Timing API calls in production. By default, we
-// only emit performance.mark/measure calls in __DEV__. But if
+// only emit performance.mark/measure calls in (/* __DEV__ */ false). But if
 // somebody calls addUserTimingListener() which is exposed as an
 // experimental FB-only export, we call performance.mark/measure
 // as long as there is more than a single listener.
-export let enableUserTimingAPI = __DEV__;
+export let enableUserTimingAPI = (/* __DEV__ */ false);
 
 export const enableProfilerTimer = __PROFILE__;
 export const enableSchedulerTracing = __PROFILE__;
@@ -38,7 +38,7 @@ export const enableSuspenseServerRenderer = true;
 
 let refCount = 0;
 export function addUserTimingListener() {
-  if (__DEV__) {
+  if ((/* __DEV__ */ false)) {
     // Noop.
     return () => {};
   }

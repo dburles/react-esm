@@ -9,7 +9,9 @@
 import invariant from "../invariant.js";
 export const debugRenderPhaseSideEffects = false;
 export const debugRenderPhaseSideEffectsForStrictMode = false;
-export const enableUserTimingAPI = __DEV__;
+export const enableUserTimingAPI =
+/* __DEV__ */
+false;
 export const warnAboutDeprecatedLifecycles = false;
 export const replayFailedUnitOfWorkWithInvokeGuardedCallback = false;
 export const enableProfilerTimer = false;

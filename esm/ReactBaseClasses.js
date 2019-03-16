@@ -9,7 +9,9 @@ import lowPriorityWarning from "./react-shared/lowPriorityWarning.js";
 import ReactNoopUpdateQueue from "./ReactNoopUpdateQueue.js";
 const emptyObject = {};
 
-if (__DEV__) {
+if (
+/* __DEV__ */
+false) {
   Object.freeze(emptyObject);
 }
 /**
@@ -84,7 +86,9 @@ Component.prototype.forceUpdate = function (callback) {
  */
 
 
-if (__DEV__) {
+if (
+/* __DEV__ */
+false) {
   const deprecatedAPIs = {
     isMounted: ['isMounted', 'Instead, make sure to clean up subscriptions and pending requests in ' + 'componentWillUnmount to prevent memory leaks.'],
     replaceState: ['replaceState', 'Refactor your code to use setState instead (see ' + 'https://github.com/facebook/react/issues/3236).']

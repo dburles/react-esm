@@ -18,7 +18,9 @@ const RESERVED_PROPS = {
 let specialPropKeyWarningShown, specialPropRefWarningShown;
 
 function hasValidRef(config) {
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     if (hasOwnProperty.call(config, 'ref')) {
       const getter = Object.getOwnPropertyDescriptor(config, 'ref').get;
 
@@ -32,7 +34,9 @@ function hasValidRef(config) {
 }
 
 function hasValidKey(config) {
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     if (hasOwnProperty.call(config, 'key')) {
       const getter = Object.getOwnPropertyDescriptor(config, 'key').get;
 
@@ -109,7 +113,9 @@ const ReactElement = function (type, key, ref, self, source, owner, props) {
     _owner: owner
   };
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     // The validation flag is currently mutative. We put it on
     // an external backing store so that we can freeze the whole object.
     // This can be replaced with a WeakMap once they are implemented in
@@ -196,7 +202,9 @@ export function createElement(type, config, children) {
       childArray[i] = arguments[i + 2];
     }
 
-    if (__DEV__) {
+    if (
+    /* __DEV__ */
+    false) {
       if (Object.freeze) {
         Object.freeze(childArray);
       }
@@ -216,7 +224,9 @@ export function createElement(type, config, children) {
     }
   }
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     if (key || ref) {
       const displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
 

@@ -293,7 +293,7 @@ describe('ReactElementValidator', () => {
       }).toThrowError(
         'Element type is invalid: expected a string (for built-in components) ' +
           'or a class/function (for composite components) but got: null.' +
-          (__DEV__ ? '\n\nCheck the render method of `ParentComp`.' : ''),
+          ((/* __DEV__ */ false) ? '\n\nCheck the render method of `ParentComp`.' : ''),
       );
     }).toWarnDev(
       'Warning: React.createElement: type is invalid -- expected a string ' +

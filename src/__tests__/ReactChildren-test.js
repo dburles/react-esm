@@ -872,7 +872,7 @@ describe('ReactChildren', () => {
     }).toThrowError(
       'Objects are not valid as a React child (found: object with keys ' +
         '{a, b}).' +
-        (__DEV__
+        ((/* __DEV__ */ false)
           ? ' If you meant to render a collection of children, use an ' +
             'array instead.'
           : ''),
@@ -886,7 +886,7 @@ describe('ReactChildren', () => {
       React.Children.forEach(/abc/, function() {}, null);
     }).toThrowError(
       'Objects are not valid as a React child (found: /abc/).' +
-        (__DEV__
+        ((/* __DEV__ */ false)
           ? ' If you meant to render a collection of children, use an ' +
             'array instead.'
           : ''),

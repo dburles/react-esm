@@ -142,7 +142,7 @@ describe('Profiler', () => {
 
           // This will throw in production too,
           // But the test is only interested in verifying the DEV error message.
-          if (__DEV__ && enableProfilerTimer) {
+          if ((/* __DEV__ */ false) && enableProfilerTimer) {
             it('should warn if required params are missing', () => {
               expect(() => {
                 expect(() => {
@@ -1002,7 +1002,7 @@ describe('Profiler', () => {
                 // commit time: 5 initially + 14 of work
                 // Add an additional 3 (ThrowsError) if we replayed the failed work
                 expect(mountCall[5]).toBe(
-                  __DEV__ && replayFailedUnitOfWorkWithInvokeGuardedCallback
+                  (/* __DEV__ */ false) && replayFailedUnitOfWorkWithInvokeGuardedCallback
                     ? 22
                     : 19,
                 );
@@ -1015,14 +1015,14 @@ describe('Profiler', () => {
                 expect(updateCall[3]).toBe(22);
                 // start time
                 expect(updateCall[4]).toBe(
-                  __DEV__ && replayFailedUnitOfWorkWithInvokeGuardedCallback
+                  (/* __DEV__ */ false) && replayFailedUnitOfWorkWithInvokeGuardedCallback
                     ? 22
                     : 19,
                 );
                 // commit time: 19 (startTime) + 2 (ErrorBoundary) + 20 (AdvanceTime)
                 // Add an additional 3 (ThrowsError) if we replayed the failed work
                 expect(updateCall[5]).toBe(
-                  __DEV__ && replayFailedUnitOfWorkWithInvokeGuardedCallback
+                  (/* __DEV__ */ false) && replayFailedUnitOfWorkWithInvokeGuardedCallback
                     ? 44
                     : 41,
                 );
@@ -1080,7 +1080,7 @@ describe('Profiler', () => {
                 expect(mountCall[4]).toBe(5);
                 // commit time
                 expect(mountCall[5]).toBe(
-                  __DEV__ && replayFailedUnitOfWorkWithInvokeGuardedCallback
+                  (/* __DEV__ */ false) && replayFailedUnitOfWorkWithInvokeGuardedCallback
                     ? 54
                     : 44,
                 );

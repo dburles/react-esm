@@ -158,7 +158,7 @@ describe('ReactErrorUtils', () => {
     expect(ops).toEqual([true, 'nested error', false]);
   });
 
-  if (!__DEV__) {
+  if (!(/* __DEV__ */ false)) {
     // jsdom doesn't handle this properly, but Chrome and Firefox should. Test
     // this with a fixture.
     it('catches null values', () => {

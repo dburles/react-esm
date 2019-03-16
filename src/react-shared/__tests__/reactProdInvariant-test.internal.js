@@ -14,7 +14,7 @@ describe('reactProdInvariant', () => {
   let globalErrorMock;
 
   beforeEach(() => {
-    if (!__DEV__) {
+    if (!(/* __DEV__ */ false)) {
       // In production, our Jest environment overrides the global Error
       // class in order to decode error messages automatically. However
       // this is a single test where we actually *don't* want to decode
@@ -29,7 +29,7 @@ describe('reactProdInvariant', () => {
   });
 
   afterEach(() => {
-    if (!__DEV__) {
+    if (!(/* __DEV__ */ false)) {
       global.Error = globalErrorMock;
     }
   });

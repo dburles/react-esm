@@ -159,7 +159,7 @@ function traverseAllChildrenImpl(
   } else {
     const iteratorFn = getIteratorFn(children);
     if (typeof iteratorFn === 'function') {
-      if (__DEV__) {
+      if ((/* __DEV__ */ false)) {
         // Warn about using Maps as children
         if (iteratorFn === children.entries) {
           warning(
@@ -187,7 +187,7 @@ function traverseAllChildrenImpl(
       }
     } else if (type === 'object') {
       let addendum = '';
-      if (__DEV__) {
+      if ((/* __DEV__ */ false)) {
         addendum =
           ' If you meant to render a collection of children, use an array ' +
           'instead.' +

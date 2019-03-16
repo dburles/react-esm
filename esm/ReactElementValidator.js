@@ -22,7 +22,9 @@ import { isValidElement, createElement, cloneElement } from "./ReactElement.js";
 import ReactDebugCurrentFrame, { setCurrentlyValidatingElement } from "./ReactDebugCurrentFrame.js";
 let propTypesMisspellWarningShown;
 
-if (__DEV__) {
+if (
+/* __DEV__ */
+false) {
   propTypesMisspellWarningShown = false;
 }
 
@@ -108,7 +110,9 @@ function validateExplicitKey(element, parentType) {
 
   setCurrentlyValidatingElement(element);
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     warning(false, 'Each child in a list should have a unique "key" prop.' + '%s%s See https://fb.me/react-warning-keys for more information.', currentComponentErrorInfo, childOwner);
   }
 
@@ -293,7 +297,9 @@ export function createFactoryWithValidation(type) {
   const validatedFactory = createElementWithValidation.bind(null, type);
   validatedFactory.type = type; // Legacy hook: remove it
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     Object.defineProperty(validatedFactory, 'type', {
       enumerable: false,
       get: function () {

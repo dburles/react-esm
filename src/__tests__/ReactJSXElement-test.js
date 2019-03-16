@@ -62,7 +62,7 @@ describe('ReactJSXElement', () => {
 
   it('returns an immutable element', () => {
     const element = <Component />;
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(() => (element.type = 'div')).toThrow();
     } else {
       expect(() => (element.type = 'div')).not.toThrow();

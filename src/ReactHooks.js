@@ -28,7 +28,7 @@ export function useContext<T>(
   unstable_observedBits: number | boolean | void,
 ) {
   const dispatcher = resolveDispatcher();
-  if (__DEV__) {
+  if ((/* __DEV__ */ false)) {
     warning(
       unstable_observedBits === undefined,
       'useContext() second argument is reserved for future ' +
@@ -126,7 +126,7 @@ export function useImperativeHandle<T>(
 }
 
 export function useDebugValue(value: any, formatterFn: ?(value: any) => any) {
-  if (__DEV__) {
+  if ((/* __DEV__ */ false)) {
     const dispatcher = resolveDispatcher();
     return dispatcher.useDebugValue(value, formatterFn);
   }

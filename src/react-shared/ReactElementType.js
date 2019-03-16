@@ -20,7 +20,7 @@ export type ReactElement = {
   props: any,
   _owner: any, // ReactInstance or ReactFiber
 
-  // __DEV__
+  // (/* __DEV__ */ false)
   _store: {
     validated: boolean,
   },

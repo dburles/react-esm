@@ -14,7 +14,7 @@ export default function memo<Props>(
   type: React$ElementType,
   compare?: (oldProps: Props, newProps: Props) => boolean,
 ) {
-  if (__DEV__) {
+  if ((/* __DEV__ */ false)) {
     if (!isValidElementType(type)) {
       warningWithoutStack(
         false,

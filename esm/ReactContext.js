@@ -13,7 +13,9 @@ export function createContext(defaultValue, calculateChangedBits) {
   if (calculateChangedBits === undefined) {
     calculateChangedBits = null;
   } else {
-    if (__DEV__) {
+    if (
+    /* __DEV__ */
+    false) {
       warningWithoutStack(calculateChangedBits === null || typeof calculateChangedBits === 'function', 'createContext: Expected the optional second argument to be a ' + 'function. Instead received: %s', calculateChangedBits);
     }
   }
@@ -42,7 +44,9 @@ export function createContext(defaultValue, calculateChangedBits) {
   let hasWarnedAboutUsingNestedContextConsumers = false;
   let hasWarnedAboutUsingConsumerProvider = false;
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     // A separate object, but proxies back to the original context object for
     // backwards compatibility. It has a different $$typeof, so we can properly
     // warn for the incorrect usage of Context as a Consumer.
@@ -116,7 +120,9 @@ export function createContext(defaultValue, calculateChangedBits) {
     context.Consumer = context;
   }
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     context._currentRenderer = null;
     context._currentRenderer2 = null;
   }

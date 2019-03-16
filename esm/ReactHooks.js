@@ -19,7 +19,9 @@ function resolveDispatcher() {
 export function useContext(Context, unstable_observedBits) {
   const dispatcher = resolveDispatcher();
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     warning(unstable_observedBits === undefined, 'useContext() second argument is reserved for future ' + 'use in React. Passing it is not supported. ' + 'You passed: %s.%s', unstable_observedBits, typeof unstable_observedBits === 'number' && Array.isArray(arguments[2]) ? '\n\nDid you call array.map(useContext)? ' + 'Calling Hooks inside a loop is not supported. ' + 'Learn more at https://fb.me/rules-of-hooks' : ''); // TODO: add a more generic warning for invalid values.
 
     if (Context._context !== undefined) {
@@ -69,7 +71,9 @@ export function useImperativeHandle(ref, create, inputs) {
   return dispatcher.useImperativeHandle(ref, create, inputs);
 }
 export function useDebugValue(value, formatterFn) {
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     const dispatcher = resolveDispatcher();
     return dispatcher.useDebugValue(value, formatterFn);
   }

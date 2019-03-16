@@ -58,7 +58,7 @@ describe('ReactStrictMode', () => {
 
       const component = ReactTestRenderer.create(<ClassComponent />);
 
-      if (__DEV__) {
+      if ((/* __DEV__ */ false)) {
         expect(log).toEqual([
           'constructor',
           'constructor',
@@ -81,7 +81,7 @@ describe('ReactStrictMode', () => {
       shouldComponentUpdate = true;
 
       component.update(<ClassComponent />);
-      if (__DEV__) {
+      if ((/* __DEV__ */ false)) {
         expect(log).toEqual([
           'getDerivedStateFromProps',
           'getDerivedStateFromProps',
@@ -104,7 +104,7 @@ describe('ReactStrictMode', () => {
 
       component.update(<ClassComponent />);
 
-      if (__DEV__) {
+      if ((/* __DEV__ */ false)) {
         expect(log).toEqual([
           'getDerivedStateFromProps',
           'getDerivedStateFromProps',
@@ -140,7 +140,7 @@ describe('ReactStrictMode', () => {
       });
 
       // Callback should be invoked twice in DEV
-      expect(setStateCount).toBe(__DEV__ ? 2 : 1);
+      expect(setStateCount).toBe((/* __DEV__ */ false) ? 2 : 1);
       // But each time `state` should be the previous value
       expect(instance.state.count).toBe(2);
     });
@@ -201,7 +201,7 @@ describe('ReactStrictMode', () => {
 
         const component = ReactTestRenderer.create(<Root />);
 
-        if (__DEV__ && debugRenderPhaseSideEffectsForStrictMode) {
+        if ((/* __DEV__ */ false) && debugRenderPhaseSideEffectsForStrictMode) {
           expect(log).toEqual([
             'constructor',
             'constructor',
@@ -224,7 +224,7 @@ describe('ReactStrictMode', () => {
         shouldComponentUpdate = true;
 
         component.update(<Root />);
-        if (__DEV__ && debugRenderPhaseSideEffectsForStrictMode) {
+        if ((/* __DEV__ */ false) && debugRenderPhaseSideEffectsForStrictMode) {
           expect(log).toEqual([
             'getDerivedStateFromProps',
             'getDerivedStateFromProps',
@@ -246,7 +246,7 @@ describe('ReactStrictMode', () => {
         shouldComponentUpdate = false;
 
         component.update(<Root />);
-        if (__DEV__ && debugRenderPhaseSideEffectsForStrictMode) {
+        if ((/* __DEV__ */ false) && debugRenderPhaseSideEffectsForStrictMode) {
           expect(log).toEqual([
             'getDerivedStateFromProps',
             'getDerivedStateFromProps',
@@ -290,7 +290,7 @@ describe('ReactStrictMode', () => {
 
         // Callback should be invoked twice (in DEV)
         expect(setStateCount).toBe(
-          __DEV__ && debugRenderPhaseSideEffectsForStrictMode ? 2 : 1,
+          (/* __DEV__ */ false) && debugRenderPhaseSideEffectsForStrictMode ? 2 : 1,
         );
         // But each time `state` should be the previous value
         expect(instance.state.count).toBe(2);

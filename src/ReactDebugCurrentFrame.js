@@ -17,12 +17,12 @@ const ReactDebugCurrentFrame = {};
 let currentlyValidatingElement = (null: null | ReactElement);
 
 export function setCurrentlyValidatingElement(element: null | ReactElement) {
-  if (__DEV__) {
+  if ((/* __DEV__ */ false)) {
     currentlyValidatingElement = element;
   }
 }
 
-if (__DEV__) {
+if ((/* __DEV__ */ false)) {
   // Stack implementation injected by the current renderer.
   ReactDebugCurrentFrame.getCurrentStack = (null: null | (() => string));
 

@@ -138,7 +138,9 @@ function traverseAllChildrenImpl(children, nameSoFar, callback, traverseContext)
     const iteratorFn = getIteratorFn(children);
 
     if (typeof iteratorFn === 'function') {
-      if (__DEV__) {
+      if (
+      /* __DEV__ */
+      false) {
         // Warn about using Maps as children
         if (iteratorFn === children.entries) {
           warning(didWarnAboutMaps, 'Using Maps as children is unsupported and will likely yield ' + 'unexpected results. Convert it to a sequence/iterable of keyed ' + 'ReactElements instead.');
@@ -158,7 +160,9 @@ function traverseAllChildrenImpl(children, nameSoFar, callback, traverseContext)
     } else if (type === 'object') {
       let addendum = '';
 
-      if (__DEV__) {
+      if (
+      /* __DEV__ */
+      false) {
         addendum = ' If you meant to render a collection of children, use an array ' + 'instead.' + ReactDebugCurrentFrame.getStackAddendum();
       }
 

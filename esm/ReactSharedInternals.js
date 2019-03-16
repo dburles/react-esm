@@ -55,7 +55,9 @@ if (__UMD__) {
   });
 }
 
-if (__DEV__) {
+if (
+/* __DEV__ */
+false) {
   Object.assign(ReactSharedInternals, {
     // These should not be included in production.
     ReactDebugCurrentFrame,

@@ -12,7 +12,7 @@ import warningWithoutStack from 'shared/warningWithoutStack.js';
 export default function forwardRef<Props, ElementType: React$ElementType>(
   render: (props: Props, ref: React$Ref<ElementType>) => React$Node,
 ) {
-  if (__DEV__) {
+  if ((/* __DEV__ */ false)) {
     if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
       warningWithoutStack(
         false,

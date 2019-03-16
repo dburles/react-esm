@@ -50,7 +50,7 @@ describe('ReactElement', () => {
     expect(element.type).toBe(ComponentClass);
     expect(element.key).toBe(null);
     expect(element.ref).toBe(null);
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(Object.isFrozen(element)).toBe(true);
       expect(Object.isFrozen(element.props)).toBe(true);
     }
@@ -125,7 +125,7 @@ describe('ReactElement', () => {
     expect(element.type).toBe('div');
     expect(element.key).toBe(null);
     expect(element.ref).toBe(null);
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(Object.isFrozen(element)).toBe(true);
       expect(Object.isFrozen(element.props)).toBe(true);
     }
@@ -134,7 +134,7 @@ describe('ReactElement', () => {
 
   it('returns an immutable element', () => {
     const element = React.createFactory(ComponentClass)();
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(() => (element.type = 'div')).toThrow();
     } else {
       expect(() => (element.type = 'div')).not.toThrow();
@@ -164,7 +164,7 @@ describe('ReactElement', () => {
     expect(element.type).toBe(ComponentClass);
     expect(element.key).toBe('12');
     expect(element.ref).toBe('34');
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(Object.isFrozen(element)).toBe(true);
       expect(Object.isFrozen(element.props)).toBe(true);
     }
@@ -180,7 +180,7 @@ describe('ReactElement', () => {
     expect(element.type).toBe(ComponentClass);
     expect(element.key).toBe('null');
     expect(element.ref).toBe(null);
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(Object.isFrozen(element)).toBe(true);
       expect(Object.isFrozen(element.props)).toBe(true);
     }
@@ -197,7 +197,7 @@ describe('ReactElement', () => {
     expect(element.type).toBe(ComponentClass);
     expect(element.key).toBe(null);
     expect(element.ref).toBe(null);
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(Object.isFrozen(element)).toBe(true);
       expect(Object.isFrozen(element.props)).toBe(true);
     }
@@ -219,7 +219,7 @@ describe('ReactElement', () => {
     expect(element.type).toBe(ComponentClass);
     expect(element.key).toBe('12');
     expect(element.ref).toBe(null);
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(Object.isFrozen(element)).toBe(true);
       expect(Object.isFrozen(element.props)).toBe(true);
     }
@@ -372,7 +372,7 @@ describe('ReactElement', () => {
       render() {
         const el = <div className="moo" />;
 
-        if (__DEV__) {
+        if ((/* __DEV__ */ false)) {
           expect(function() {
             el.props.className = 'quack';
           }).toThrow();
@@ -386,7 +386,7 @@ describe('ReactElement', () => {
       }
     }
     const outer = ReactTestUtils.renderIntoDocument(<Outer color="orange" />);
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(ReactDOM.findDOMNode(outer).className).toBe('moo');
     } else {
       expect(ReactDOM.findDOMNode(outer).className).toBe('quack');
@@ -399,7 +399,7 @@ describe('ReactElement', () => {
       render() {
         const el = <div>{this.props.sound}</div>;
 
-        if (__DEV__) {
+        if ((/* __DEV__ */ false)) {
           expect(function() {
             el.props.className = 'quack';
           }).toThrow();
@@ -415,7 +415,7 @@ describe('ReactElement', () => {
     Outer.defaultProps = {sound: 'meow'};
     const outer = ReactDOM.render(<Outer />, container);
     expect(ReactDOM.findDOMNode(outer).textContent).toBe('meow');
-    if (__DEV__) {
+    if ((/* __DEV__ */ false)) {
       expect(ReactDOM.findDOMNode(outer).className).toBe('');
     } else {
       expect(ReactDOM.findDOMNode(outer).className).toBe('quack');

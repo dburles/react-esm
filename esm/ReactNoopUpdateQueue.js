@@ -8,7 +8,9 @@ import warningWithoutStack from "./react-shared/warningWithoutStack.js";
 const didWarnStateUpdateForUnmountedComponent = {};
 
 function warnNoop(publicInstance, callerName) {
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     const constructor = publicInstance.constructor;
     const componentName = constructor && (constructor.displayName || constructor.name) || 'ReactClass';
     const warningKey = `${componentName}.${callerName}`;

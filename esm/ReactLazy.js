@@ -15,7 +15,9 @@ export function lazy(ctor) {
     _result: null
   };
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     // In production, this would just set it on the object.
     let defaultProps;
     let propTypes;

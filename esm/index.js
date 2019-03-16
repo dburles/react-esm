@@ -46,9 +46,15 @@ const React = {
   Fragment: REACT_FRAGMENT_TYPE,
   StrictMode: REACT_STRICT_MODE_TYPE,
   Suspense: REACT_SUSPENSE_TYPE,
-  createElement: __DEV__ ? createElementWithValidation : createElement,
-  cloneElement: __DEV__ ? cloneElementWithValidation : cloneElement,
-  createFactory: __DEV__ ? createFactoryWithValidation : createFactory,
+  createElement:
+  /* __DEV__ */
+  false ? createElementWithValidation : createElement,
+  cloneElement:
+  /* __DEV__ */
+  false ? cloneElementWithValidation : cloneElement,
+  createFactory:
+  /* __DEV__ */
+  false ? createFactoryWithValidation : createFactory,
   isValidElement: isValidElement,
   version: ReactVersion,
   unstable_ConcurrentMode: REACT_CONCURRENT_MODE_TYPE,

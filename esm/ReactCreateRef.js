@@ -11,7 +11,9 @@ export function createRef() {
     current: null
   };
 
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     Object.seal(refObject);
   }
 

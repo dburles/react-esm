@@ -11,7 +11,7 @@ import lowPriorityWarning from 'shared/lowPriorityWarning.js';
 import ReactNoopUpdateQueue from './ReactNoopUpdateQueue.js';
 
 const emptyObject = {};
-if (__DEV__) {
+if ((/* __DEV__ */ false)) {
   Object.freeze(emptyObject);
 }
 
@@ -89,7 +89,7 @@ Component.prototype.forceUpdate = function(callback) {
  * we would like to deprecate them, we're not going to move them over to this
  * modern base class. Instead, we define a getter that warns if it's accessed.
  */
-if (__DEV__) {
+if ((/* __DEV__ */ false)) {
   const deprecatedAPIs = {
     isMounted: [
       'isMounted',

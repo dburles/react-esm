@@ -7,7 +7,9 @@
 import { REACT_FORWARD_REF_TYPE, REACT_MEMO_TYPE } from "./react-shared/ReactSymbols.js";
 import warningWithoutStack from "./react-shared/warningWithoutStack.js";
 export default function forwardRef(render) {
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
       warningWithoutStack(false, 'forwardRef requires a render function but received a `memo` ' + 'component. Instead of forwardRef(memo(...)), use ' + 'memo(forwardRef(...)).');
     } else if (typeof render !== 'function') {

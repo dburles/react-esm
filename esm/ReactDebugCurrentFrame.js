@@ -11,12 +11,16 @@ import getComponentName from "./react-shared/getComponentName.js";
 const ReactDebugCurrentFrame = {};
 let currentlyValidatingElement = null;
 export function setCurrentlyValidatingElement(element) {
-  if (__DEV__) {
+  if (
+  /* __DEV__ */
+  false) {
     currentlyValidatingElement = element;
   }
 }
 
-if (__DEV__) {
+if (
+/* __DEV__ */
+false) {
   // Stack implementation injected by the current renderer.
   ReactDebugCurrentFrame.getCurrentStack = null;
 

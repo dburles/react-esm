@@ -15,7 +15,6 @@ import lowPriorityWarning from "./react-shared/lowPriorityWarning.js";
 import isValidElementType from "./react-shared/isValidElementType.js";
 import getComponentName from "./react-shared/getComponentName.js";
 import { getIteratorFn, REACT_FORWARD_REF_TYPE, REACT_MEMO_TYPE, REACT_FRAGMENT_TYPE, REACT_ELEMENT_TYPE } from "./react-shared/ReactSymbols.js";
-import checkPropTypes from 'prop-types/checkPropTypes.js';
 import warning from "./react-shared/warning.js";
 import warningWithoutStack from "./react-shared/warningWithoutStack.js";
 import ReactCurrentOwner from "./ReactCurrentOwner.js";
@@ -193,7 +192,6 @@ function validatePropTypes(element) {
 
   if (propTypes) {
     setCurrentlyValidatingElement(element);
-    checkPropTypes(propTypes, element.props, 'prop', name, ReactDebugCurrentFrame.getStackAddendum);
     setCurrentlyValidatingElement(null);
   } else if (type.PropTypes !== undefined && !propTypesMisspellWarningShown) {
     propTypesMisspellWarningShown = true;

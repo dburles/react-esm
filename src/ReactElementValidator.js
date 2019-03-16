@@ -22,7 +22,6 @@ import {
   REACT_FRAGMENT_TYPE,
   REACT_ELEMENT_TYPE,
 } from 'shared/ReactSymbols.js';
-import checkPropTypes from 'prop-types/checkPropTypes.js';
 import warning from 'shared/warning.js';
 import warningWithoutStack from 'shared/warningWithoutStack.js';
 
@@ -206,13 +205,6 @@ function validatePropTypes(element) {
   }
   if (propTypes) {
     setCurrentlyValidatingElement(element);
-    checkPropTypes(
-      propTypes,
-      element.props,
-      'prop',
-      name,
-      ReactDebugCurrentFrame.getStackAddendum,
-    );
     setCurrentlyValidatingElement(null);
   } else if (type.PropTypes !== undefined && !propTypesMisspellWarningShown) {
     propTypesMisspellWarningShown = true;

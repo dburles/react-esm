@@ -4,8 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import assign from 'object-assign.js';
-import { unstable_cancelCallback, unstable_shouldYield, unstable_now, unstable_scheduleCallback, unstable_runWithPriority, unstable_next, unstable_getFirstCallbackNode, unstable_pauseExecution, unstable_continueExecution, unstable_wrapCallback, unstable_getCurrentPriorityLevel, unstable_IdlePriority, unstable_ImmediatePriority, unstable_LowPriority, unstable_NormalPriority, unstable_UserBlockingPriority } from 'scheduler.js';
+import { unstable_cancelCallback, unstable_shouldYield, unstable_now, unstable_scheduleCallback, unstable_runWithPriority, unstable_next, unstable_getFirstCallbackNode, unstable_pauseExecution, unstable_continueExecution, unstable_wrapCallback, unstable_getCurrentPriorityLevel, unstable_IdlePriority, unstable_ImmediatePriority, unstable_LowPriority, unstable_NormalPriority, unstable_UserBlockingPriority } from "./react-scheduler/index.js";
 import { __interactionsRef, __subscriberRef, unstable_clear, unstable_getCurrent, unstable_getThreadID, unstable_subscribe, unstable_trace, unstable_unsubscribe, unstable_wrap } from "./react-scheduler/tracing.js";
 import ReactCurrentDispatcher from "./ReactCurrentDispatcher.js";
 import ReactCurrentOwner from "./ReactCurrentOwner.js";
@@ -14,7 +13,7 @@ const ReactSharedInternals = {
   ReactCurrentDispatcher,
   ReactCurrentOwner,
   // Used by renderers to avoid bundling object-assign twice in UMD bundles:
-  assign
+  assign: Object.assign
 };
 
 if (__UMD__) {

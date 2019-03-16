@@ -5,7 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import assign from 'object-assign.js';
 import {
   unstable_cancelCallback,
   unstable_shouldYield,
@@ -23,7 +22,7 @@ import {
   unstable_LowPriority,
   unstable_NormalPriority,
   unstable_UserBlockingPriority,
-} from 'scheduler.js';
+} from './react-scheduler/index.js';
 import {
   __interactionsRef,
   __subscriberRef,
@@ -43,7 +42,7 @@ const ReactSharedInternals = {
   ReactCurrentDispatcher,
   ReactCurrentOwner,
   // Used by renderers to avoid bundling object-assign twice in UMD bundles:
-  assign,
+  assign: Object.assign,
 };
 
 if (__UMD__) {
